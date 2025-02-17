@@ -1,0 +1,54 @@
+package br.com.sistemabiblioteca;
+
+public class Livro {
+    private int idLivro;
+    private String titulo;
+    private String autor;
+    private boolean disponivel;
+
+    public Livro(int idLivro, String titulo, String autor) {
+        this.idLivro = idLivro;
+        this.titulo = titulo;
+        this.autor = autor;
+        this.disponivel = true; // por padrão, quando criado, o livro está disponível
+    }
+
+    // Getters e Setters
+    public int getIdLivro() {
+        return idLivro;
+    }
+
+    public void setIdLivro(int idLivro) {
+        this.idLivro = idLivro;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public boolean isDisponivel() {
+        return disponivel;
+    }
+
+    public void setDisponivel(boolean disponivel) {
+        this.disponivel = disponivel;
+    }
+
+    @Override
+    public String toString() {
+        return "ID: " + idLivro + " | Título: " + titulo + " | Autor: " + autor + 
+               " | Disponível: " + (disponivel ? "Sim" : "Não");
+    }
+}
